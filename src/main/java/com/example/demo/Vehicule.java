@@ -2,6 +2,7 @@ package com.example.demo;
 
 import javax.persistence.DiscriminatorColumn;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 
@@ -9,6 +10,7 @@ import javax.persistence.InheritanceType;
 @Inheritance(strategy = InheritanceType.JOINED)
 @DiscriminatorColumn(name = "type")
 public class Vehicule {
+@Id
 private long idVehicule;
 private String manifacturer;
 public long getIdVehicule() {
